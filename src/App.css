@@ -1,54 +1,38 @@
-import React from 'react';
-import bg_image from './bg.png';
-import planet_1 from './planet_tr.png';
-import planet_2 from './planet_bl.png';
-import planets from './Small_planets.png';
-import rover_image from './rover.png';
-import scholar_image from './scholar.png';
-import medical_image from './medical.png';
-import education_image from './education.png';
-import currency_image from './currency.png';
-import TrackCard from './Trackcard.jsx';
-import { layout } from './style.js'; 
+.App {
+  text-align: center;
+}
 
-const App = () => {
-  return (
-    <div className="relative h-screen bg-primary">
-      {/* Background Image Container */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center h-full"
-        style={{ backgroundImage: `url(${bg_image})` }}
-      >
-        {/* Rover on Top Left */}
-        <div className="z-10 absolute top-0 left-0 w-full overflow-hidden">
-          <img src={rover_image} alt="Rover" className="w-full h-full object-cover object-center" />
-        </div>
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
-        {/* Planet on Top Right */}
-        <div className={`z-10 bg-transparent absolute top-0 right-0 ${layout.sectionImg}`}>
-          <img src={planet_1} alt="Planet1" className="w-full h-full object-cover object-center" />
-        </div>
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
-        {/* Planet on Bottom Left */}
-        <div className={`z-10 absolute bottom-24 left-8 sm:left-10 md:left-12 lg:left-14 xl:left-16 ${layout.sectionImg}`}>
-          <img src={planet_2} alt="Planet2" className="w-full h-full object-cover object-center" />
-        </div>
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
-        {/* Small Planets */}
-        <div className={`z-10 absolute bottom-12 left-24 sm:left-26 md:left-28 lg:left-30 xl:left-32 ${layout.sectionImg}`}>
-          <img src={planets} alt="Planets" className="w-full h-full object-cover object-center" />
-        </div>
-      </div>
+.App-link {
+  color: #61dafb;
+}
 
-      {/* Track Cards */}
-      <div className={`z-10 absolute  top-1/2 ${layout.section} ${layout.marginX}`}>
-        <TrackCard title="TRACK 01" icon={scholar_image} positionRight={true} />
-        <TrackCard title="TRACK 02" icon={education_image} positionRight={false} />
-        <TrackCard title="TRACK 03" icon={medical_image} positionRight={true} />
-        <TrackCard title="TRACK 04" icon={currency_image} positionRight={false} />
-      </div>
-    </div>
-  );
-};
-
-export default App;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
