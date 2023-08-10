@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const TrackCard = ({ title, icon, positionRight }) => {
-  const [isHovered, setIsHovered] = useState(false); 
+  const [isHovered, setIsHovered] = useState(false);
 
   const iconPosition = positionRight ? 'flex-row-reverse' : 'flex-row';
   const titleMarginClass = (title === 'TRACK 01' || title === 'TRACK 03') ? 'mr-2' : '';
@@ -16,7 +16,7 @@ const TrackCard = ({ title, icon, positionRight }) => {
 
   return (
     <div
-      className={`bg-transparent rounded-lg p-4 flex items-center ${iconPosition} w-56 sm:w-64 md:w-72 lg:w-80 xl:w-96 mb-4 md:mb-6`}
+      className={`bg-transparent rounded-lg p-4 flex items-center ${iconPosition} w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 mb-4 md:mb-6`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
