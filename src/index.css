@@ -1,8 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* For screens with max width 767px (typical mobile screen size) */
+@media (max-width: 767px) {
+  /* Adjust the background image sizes */
+  .bg-image-container,
+  .bg-image2 {
+    height: 50vh; /* 50% of the viewport height */
+    background-size: 100% 50vh; /* 100% width and 50% viewport height */
+  }
+
+  /* Adjust the position of the track cards */
+  .track-cards {
+    left: 10px; /* Adjust the value as needed */
+    transform: translate(0, -50%); /* Vertically center the track cards */
+  }
+}
+
+/* For screens with max width 1023px (typical tablet screen size) */
+@media (max-width: 1023px) {
+  /* Similar adjustments for tablet screens if needed */
+}
+
 
 :root {
   --black-gradient: linear-gradient(

@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 import bg_image from './frame1.png';
 import bg_image2 from './frame2.png'; // Make sure to import bg_image2
 import scholar_image from './scholar.png';
@@ -18,7 +19,6 @@ const App = () => {
           style={{
             backgroundImage: `url(${bg_image})`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center', 
           }}
         ></div>
@@ -39,7 +39,6 @@ const App = () => {
           style={{
             backgroundImage: `url(${bg_image2})`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center', // Updated this to 'center'
           }}
         ></div>
